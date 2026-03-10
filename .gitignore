@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Django
+db.sqlite3
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# Editors
+.vscode/
+.zed/
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Python testing / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Pyright
+.pyright/
+
