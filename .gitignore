@@ -10,6 +10,7 @@ db.sqlite3
 venv/
 .env
 .env.*
+.venv/
 
 
 # OS files
@@ -39,4 +40,3 @@ htmlcov/
 
 # Pyright
 .pyright/
-
