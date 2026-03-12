@@ -7,7 +7,7 @@ from .models import Choice, Question
 
 
 def index(request):
-    latest_question_list = Question.objects.order_by("-pub_date")[:5]
+    latest_question_list = Question.objects.order_by("-pub_date")[:50]
     context = {"latest_question_list": latest_question_list}
     # template = loader.get_template("polls/index.html")
     # return HttpResponse(template.render(context, request))
@@ -27,7 +27,7 @@ def results(request, question_id):
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
-        selected_choice = question.get(pk=request.POST["choice"])
+        selected_choice = question.choice_set.get(pk=request.POST["choice"])
     except (KeyError, Choice.DoesNotExist):
         # Redisplay the question voting form
         return render(
