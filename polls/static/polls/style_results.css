@@ -1,0 +1,80 @@
+/* Background and base layout */
+body {
+    background: white url("images/background_2.png") no-repeat center top;
+    background-size: cover;
+    font-family: "Segoe UI", sans-serif;
+    padding: 2rem;
+    color: #222;
+}
+
+/* Title styling */
+h2 {
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* List reset */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Each result row */
+li {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1rem 1.2rem;
+    margin: 0.7rem 0;
+    border-left: 6px solid #4caf50;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Vote count emphasis */
+li span.votes {
+    font-weight: 700;
+    color: #2e7d32;
+    background: rgba(76, 175, 80, 0.15);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+}
+
+/* “Vote again?” button */
+a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: #4caf50;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+a:hover {
+    background: #3d8b40;
+    transform: translateY(-2px);
+}

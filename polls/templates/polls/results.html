@@ -1,8 +1,10 @@
+{% load static %}
 <!doctype html>
 <html lang="en-US">
     <head>
         <meta charset="utf-8" />
         <title>Results page</title>
+        <link rel="stylesheet" href="{% static 'polls/style_results.css' %}" />
     </head>
     <body>
         <h2>{{ question.question_text }}</h2>
