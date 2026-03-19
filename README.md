@@ -5,22 +5,39 @@ It lets you view poll questions at `/polls/`, click a question to see its choice
 
 ## Requirements
 
-- Python 3.x
-- pip
+- Python 3.12+ (see `pyproject.toml`)
+- [Poetry](https://python-poetry.org/) (dependency manager)
 
-Project dependency versions are listed in `requirements.txt`.
+This project uses Poetry (`pyproject.toml` + `poetry.lock`) so setup is consistent across computers.
 
-## Setup (macOS/Linux)
+## Setup (any computer)
 
 From the project root (the folder containing `manage.py`):
 
+If you don't have Poetry installed yet:
+
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+Then continue:
+
+```bash
+poetry install
+poetry run python manage.py migrate
+poetry run python manage.py runserver
+```
+
+Optional: enter the virtual environment shell (interactive)
+
+```bash
+poetry install
+poetry shell
 python manage.py migrate
 python manage.py runserver
 ```
+
+To exit the shell, type `exit`.
 
 Open:
 
@@ -30,8 +47,7 @@ Open:
 ## Create an admin user
 
 ```bash
-source .venv/bin/activate
-python manage.py createsuperuser
+poetry run python manage.py createsuperuser
 ```
 
 Then log in at `/admin/` and add `Question` + `Choice` entries.
