@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "questions-choices"
+version = "0.1.0"
+description = "This is a small Django project based on the classic Polls example app."
+authors = ["Maria Fadgyas"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+Django = "4.2.11"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+extend-exclude = "polls/templates/admin/base_site.html"
