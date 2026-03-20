@@ -10,7 +10,7 @@ It lets you view poll questions at `/polls/`, click a question to see its choice
 
 This project uses Poetry (`pyproject.toml` + `poetry.lock`) so setup is consistent across computers.
 
-## Setup (any computer)
+## Setup
 
 From the project root (the folder containing `manage.py`):
 
@@ -51,4 +51,3 @@ poetry run python manage.py createsuperuser
 ```
 
 Then log in at `/admin/` and add `Question` + `Choice` entries.
-
